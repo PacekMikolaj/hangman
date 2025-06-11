@@ -1,11 +1,7 @@
 #include "protocol.h"
 #include <string.h>
-#ifdef _WIN32
-  #include <winsock2.h>
-  #include <ws2tcpip.h>
-#else
-  #include <arpa/inet.h>
-#endif
+#include <arpa/inet.h>
+
 
 
 int encode_tlv(const tlv_t* msg, uint8_t* buffer, size_t bufsize) {
